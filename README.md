@@ -1,6 +1,10 @@
 # Task Management API
 
-![.NET](https://img.shields.io/badge/.NET-8.0-blueviolet)![Лицензия](https://img.shields.io/badge/license-MIT-green)![Сборка](https://img.shields.io/badge/build-passing-brightgreen)Task Management API — это RESTful API, разработанный на ASP.NET Core 8.0 для управления задачами с использованием JWT-аутентификации. API позволяет пользователям регистрироваться, входить в систему и выполнять CRUD-операции с задачами, при этом задачи каждого пользователя изолированы. Для упрощения используется In-Memory база данных (Entity Framework Core), а Swagger обеспечивает интерактивную документацию и тестирование.
+![.NET](https://img.shields.io/badge/.NET-8.0-blueviolet)
+![Лицензия](https://img.shields.io/badge/license-MIT-green)
+![Сборка](https://img.shields.io/badge/build-passing-brightgreen)
+
+Task Management API — это RESTful API, разработанный на ASP.NET Core 8.0 для управления задачами с использованием JWT-аутентификации. API позволяет пользователям регистрироваться, входить в систему и выполнять CRUD-операции с задачами, при этом задачи каждого пользователя изолированы. Для упрощения используется In-Memory база данных (Entity Framework Core), а Swagger обеспечивает интерактивную документацию и тестирование.
 
 ## Возможности
 
