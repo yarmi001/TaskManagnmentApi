@@ -257,13 +257,6 @@ TaskManagementApi/
 
 Спецификация OpenAPI доступна по адресу `https://localhost:<port>/swagger/v1/swagger.json`. Ее можно скачать для использования в инструментах, таких как Swagger Editor, или для генерации клиентского кода.
 
-## Как внести вклад
-
-1. Сделайте форк репозитория.
-2. Создайте ветку для новой функциональности (`git checkout -b feature/your-feature`).
-3. Зафиксируйте изменения (`git commit -m "Добавлена новая функциональность"`).
-4. Отправьте ветку в репозиторий (`git push origin feature/your-feature`).
-5. Откройте Pull Request.
 
 ## Лицензия
 
@@ -271,6 +264,6 @@ TaskManagementApi/
 
 ## Контакты
 
-- Автор: \[Ваше имя\]
-- Email: your.email@example.com
-- GitHub: your-username
+- Автор: \[Ярослав\]
+- Email: yarmisikov@gmail.com
+- GitHub: yarmi001
