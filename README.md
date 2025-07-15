@@ -1,6 +1,7 @@
 <img width="62" height="20" alt="image" src="https://github.com/user-attachments/assets/0f82296e-2faa-4421-a3c5-956fafe0f761" />
 <img width="78" height="20" alt="image" src="https://github.com/user-attachments/assets/c27ba9af-8c16-4feb-b11d-70bfc48a9cbe" />
 <img width="88" height="20" alt="image" src="https://github.com/user-attachments/assets/ca69d648-6901-4292-9dbb-ea139d4a2fce" />
+
 Task Management API — это RESTful API, разработанный на ASP.NET Core 8.0 для управления задачами с использованием JWT-аутентификации. API позволяет пользователям регистрироваться, входить в систему и выполнять CRUD-операции с задачами, при этом задачи каждого пользователя изолированы. Для упрощения используется In-Memory база данных (Entity Framework Core), а Swagger обеспечивает интерактивную документацию и тестирование.
 **Возможности**
 Аутентификация пользователей: Регистрация и вход с использованием JWT-токенов.
