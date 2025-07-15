@@ -264,6 +264,6 @@ TaskManagementApi/
 
 ## Контакты
 
-- Автор: \[Ярослав\]
+- Автор: \Ярослав\
 - Email: yarmisikov@gmail.com
 - GitHub: yarmi001
