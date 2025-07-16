@@ -12,21 +12,46 @@ namespace TaskManagnmentApi.Services
     {
         private readonly AppDbContext _context;
         private readonly IConfiguration _configuration;
+        private readonly ILogger<AuthService> _logger;
 
-        public AuthService(AppDbContext context, IConfiguration configuration)
+        public AuthService(AppDbContext context, IConfiguration configuration, ILogger<AuthService> logger)
         {
             _context = context;
             _configuration = configuration;
+            _logger = logger;
         }
 
         public async Task<string> LoginAsync(UserLoginDto loginDto)
         {
             var user = _context.Users.FirstOrDefault(u => u.Username == loginDto.Username);
             if (user == null || !BCrypt.Net.BCrypt.Verify(loginDto.Password, user.PasswordHash))
-                throw new UnauthorizedAccessException("Invalid credentials");
+            {
+                _logger.LogWarning("Login failed for user: {Username}", loginDto.Username);
+                return null;
+            }
 
-            var token = GenerateJwtToken(user);
-            return await Task.FromResult(token);
+            _logger.LogInformation("Generating JWT for user: {Username}", loginDto.Username);
+            var tokenHandler = new JwtSecurityTokenHandler();
+            var key = Encoding.UTF8.GetBytes(_configuration["Jwt:Key"]);
+            _logger.LogInformation("JWT Key: {Key}, Length: {Length}", _configuration["Jwt:Key"], key.Length);
+            var tokenDescriptor = new SecurityTokenDescriptor
+            {
+                Subject = new ClaimsIdentity(new[]
+                {
+                    new Claim(ClaimTypes.Name, user.Username),
+                    new Claim(ClaimTypes.NameIdentifier, user.Id.ToString())
+                }),
+                Expires = DateTime.UtcNow.AddHours(1),
+                Issuer = _configuration["Jwt:Issuer"],
+                Audience = _configuration["Jwt:Audience"],
+                SigningCredentials = new SigningCredentials(
+                    new SymmetricSecurityKey(key),
+                    SecurityAlgorithms.HmacSha256Signature)
+            };
+            var token = tokenHandler.CreateToken(tokenDescriptor);
+            var tokenString = tokenHandler.WriteToken(token);
+            _logger.LogInformation("JWT generated: {Token}", tokenString);
+            return tokenString;
         }
 
         public async Task RegisterAsync(UserLoginDto registerDto)
