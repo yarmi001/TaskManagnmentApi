@@ -1,6 +1,10 @@
 # Task Management API
 
-![.NET](https://img.shields.io/badge/.NET-8.0-blueviolet)![Лицензия](https://img.shields.io/badge/license-MIT-green)![Сборка](https://img.shields.io/badge/build-passing-brightgreen)Task Management API — это RESTful API, разработанный на ASP.NET Core 8.0 для управления задачами с использованием JWT-аутентификации. API позволяет пользователям регистрироваться, входить в систему и выполнять CRUD-операции с задачами, при этом задачи каждого пользователя изолированы. Для упрощения используется In-Memory база данных (Entity Framework Core), а Swagger обеспечивает интерактивную документацию и тестирование.
+![.NET](https://img.shields.io/badge/.NET-8.0-blueviolet)
+![Лицензия](https://img.shields.io/badge/license-MIT-green)
+![Сборка](https://img.shields.io/badge/build-passing-brightgreen)
+
+Task Management API — это RESTful API, разработанный на ASP.NET Core 8.0 для управления задачами с использованием JWT-аутентификации. API позволяет пользователям регистрироваться, входить в систему и выполнять CRUD-операции с задачами, при этом задачи каждого пользователя изолированы. Для упрощения используется In-Memory база данных (Entity Framework Core), а Swagger обеспечивает интерактивную документацию и тестирование.
 
 ## Возможности
 
@@ -253,13 +257,6 @@ TaskManagementApi/
 
 Спецификация OpenAPI доступна по адресу `https://localhost:<port>/swagger/v1/swagger.json`. Ее можно скачать для использования в инструментах, таких как Swagger Editor, или для генерации клиентского кода.
 
-## Как внести вклад
-
-1. Сделайте форк репозитория.
-2. Создайте ветку для новой функциональности (`git checkout -b feature/your-feature`).
-3. Зафиксируйте изменения (`git commit -m "Добавлена новая функциональность"`).
-4. Отправьте ветку в репозиторий (`git push origin feature/your-feature`).
-5. Откройте Pull Request.
 
 ## Лицензия
 
@@ -267,6 +264,6 @@ TaskManagementApi/
 
 ## Контакты
 
-- Автор: \[Ваше имя\]
-- Email: your.email@example.com
-- GitHub: your-username
+- Автор: Ярослав
+- Email: yarmisikov@gmail.com
+- GitHub: yarmi001
